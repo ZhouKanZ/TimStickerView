@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TimStickerView</string>
+    <string name="tab_compoundcaption">复合字幕</string>
+    <string name="tab_sticker">贴纸</string>
+    <string name="tab_caption">字幕</string>
+    <string name="crop">裁剪</string>
+</resources>

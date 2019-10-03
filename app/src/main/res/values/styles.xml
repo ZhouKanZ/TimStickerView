@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--dialog-->
+    <style name="BaseDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item><!--除去title-->
+        <item name="android:backgroundDimEnabled">false</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--除去背景色-->
+    </style>
+
+    <style name="anim_bottom_in_out" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_view_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_view_out</item>
+    </style>
+
+
+</resources>

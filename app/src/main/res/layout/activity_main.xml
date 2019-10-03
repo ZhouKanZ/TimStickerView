@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.xiaopo.flying.sticker.StickerView
+            android:id="@+id/sticker_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/rv_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showBorder="true"
+            app:showIcons="true"
+            >
+
+
+            <com.alexvasilkov.gestures.views.GestureImageView
+                android:id="@+id/image_crop_viewer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="48dp"
+                app:gest_doubleTapZoom="3"
+                app:gest_maxZoom="6"
+                app:gest_rotationEnabled="false"
+                android:src="@mipmap/heightbigger" />
+
+            <com.alexvasilkov.gestures.commons.CropAreaView
+                android:id="@+id/image_crop_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="48dp"
+                android:visibility="gone"
+                app:gest_aspect="1.3333"
+                app:gest_rulesHorizontal="0"
+                app:gest_rulesVertical="0" />
+
+
+        </com.xiaopo.flying.sticker.StickerView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:spanCount="3"
+            tools:listitem="@layout/sticker_bottom_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

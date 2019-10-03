@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:id="@+id/ivFilterIcon"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:duplicateParentState="true"/>
+
+    <ImageView
+        android:id="@+id/ivMask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/ivFilterIcon"
+        app:layout_constraintRight_toRightOf="@id/ivFilterIcon"
+        app:layout_constraintTop_toTopOf="@id/ivFilterIcon"
+        app:layout_constraintBottom_toBottomOf="@id/ivFilterIcon"
+        android:background="#cc000000"
+        android:duplicateParentState="true"
+        android:src="@drawable/ic_check_white_24dp"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@+id/tvFilterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        app:layout_constraintLeft_toLeftOf="@id/ivFilterIcon"
+        app:layout_constraintRight_toRightOf="@+id/ivFilterIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivFilterIcon"
+        android:layout_marginTop="8dp"
+        android:textSize="11dp"
+        android:textColor="@android:color/black"
+        android:text="无"
+        android:duplicateParentState="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
